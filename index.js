@@ -1,6 +1,6 @@
 const express = require("express")
 const cors = require("cors")
-const hobbitsRouter = require("./hobbits/hobbits-router")
+const winesRouter = require("./wines/wines-router")
 
 const server = express()
 const port = process.env.PORT || 5000
@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000
 server.use(cors())
 server.use(express.json())
 
-server.use("/hobbits", hobbitsRouter)
+server.use("/wines", winesRouter)
 server.get("/", (req, res) => {
 	res.json({
 		message: "Welcome to our API",
